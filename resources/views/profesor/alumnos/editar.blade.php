@@ -1,7 +1,10 @@
 @extends('profesor.layout')
 
 @section('content')
-    <h1>Editar Alumno</h1>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+        <h1 style="margin: 0;">Editar Alumno</h1>
+        <a href="{{ route('alumnos.index') }}" class="btn btn-secondary">Volver</a>
+    </div>
 
     <form action="{{ route('alumnos.update', $alumno->id_usuario) }}" method="POST">
         @csrf
@@ -44,7 +47,9 @@
             </p>
         @endif
 
-        <br>
-        <button type="submit" class="btn">Actualizar</button>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+            <button type="submit" class="btn">Actualizar</button>
+            <a href="{{ route('alumnos.index') }}" class="btn btn-secondary">Volver</a>
+        </div>
     </form>
 @endsection

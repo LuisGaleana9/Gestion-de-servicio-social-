@@ -18,7 +18,9 @@
             <div class="muted" style="color:#b91c1c; margin-top:-0.5rem; margin-bottom:0.75rem;">{{ $message }}</div>
         @enderror
 
-        <br>
-        <button type="submit" class="btn">Guardar</button>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+            <button type="submit" class="btn">Guardar</button>
+            <a href="{{ route('servicios.index') }}" class="btn btn-secondary">Volver</a>
+        </div>
     </form>
 @endsection
